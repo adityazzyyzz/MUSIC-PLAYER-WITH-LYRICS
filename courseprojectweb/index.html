@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instrumental Music Player</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Fast Beats</h1>
+      </div>
+
+      <!-- Search bar -->
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for songs..." />
+        <button id="searchBtn" type="button" title="button"><i class="fas fa-search"></i></button>
+        <div id="searchResults" class="search-results"></div>
+      </div>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="playlists.html">Playlists</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="hero-section">
+    <h1>Welcome to Fast Beats</h1>
+    <p>Your favorite instrumental tracks with lyrics, all in one place!</p>
+  </main>
+
+  <div class="section-wrapper">
+    <!-- Categories Section -->
+    <section class="categories-section">
+      <h2>Categories</h2>
+      <div class="categories">
+        <div class="category-item" data-category="Punjabi">Punjabi</div>
+        <div class="category-item" data-category="Hindi">Hindi</div>
+        <div class="category-item" data-category="Pop">Pop</div>
+        <div class="category-item" data-category="Rock">Rock</div>
+        <div class="category-item" data-category="Jazz">Jazz</div>
+        <div class="category-item" data-category="Classical">Classical</div>
+      </div>
+    </section>
+
+    <!-- Songs Section -->
+    <section class="songs-section">
+      <h2>Songs</h2>
+      <div id="songList" class="songs-list"></div>
+    </section>
+
+    <!-- Lyrics Section -->
+    <section class="lyrics-panel">
+      <h3>Lyrics</h3>
+      <p id="lyrics">Select a song to see the lyrics here.</p>
+    </section>
+
+    <!-- Playlists Section -->
+    <section class="playlists-section">
+      <h2>Playlists</h2>
+      <div class="playlists">
+        <div class="playlist-item">Top 50 Hits</div>
+        <div class="playlist-item">Chill Vibes</div>
+        <div class="playlist-item">Workout Beats</div>
+        <div class="playlist-item">Evening Tunes</div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Bottom Music Player -->
+  <footer class="player-bar">
+    <div class="player">
+      <div class="song-info">
+        <h2 id="songTitle">Now Playing: Song Title</h2>
+        <p id="songDuration">Duration: 0:00</p>
+      </div>
+      <div class="controls">
+        <button id="prevBtn" class="control-btn" aria-label="Previous Track"><i class="fas fa-backward"></i></button>
+        <button id="playPauseBtn" class="control-btn" aria-label="Play/Pause Track"><i class="fas fa-play" id="playIcon"></i></button>
+        <button id="nextBtn" class="control-btn" aria-label="Next Track"><i class="fas fa-forward"></i></button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" aria-label="Volume Control">
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
